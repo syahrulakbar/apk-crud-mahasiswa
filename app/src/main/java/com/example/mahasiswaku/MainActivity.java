@@ -98,15 +98,34 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
             @Override
             public boolean onQueryTextChange(String newText) {
                 // searchview agar menampilkan data per kata yang cocok
-                Query query =getReference.child("MahasiswaKu").child("data").orderByChild("nama").startAt(newText).endAt(newText+"\uf8ff");
+                Query query =getReference.child("MahasiswaKu").child("data");
                 query.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         dataMahasiswa = new ArrayList<>();
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+
                             data_mahasiswa mahasiswa = snapshot.getValue(data_mahasiswa.class);
                             mahasiswa.setKey(snapshot.getKey());
-                            dataMahasiswa.add(mahasiswa);
+                            String namaMhsFirstcapital = mahasiswa.getNama().substring(0, 1).toUpperCase() + mahasiswa.getNama().substring(1);
+                            String fakultasMhsFirstcapital = mahasiswa.getNama().substring(0, 1).toUpperCase() + mahasiswa.getNama().substring(1);
+                            String emailMhsFirstcapital = mahasiswa.getNama().substring(0, 1).toUpperCase() + mahasiswa.getNama().substring(1);
+                            String alamatMhsFirstcapital = mahasiswa.getNama().substring(0, 1).toUpperCase() + mahasiswa.getNama().substring(1);
+                            if (namaMhsFirstcapital.contains(newText)
+                                    || mahasiswa.getNama().toLowerCase().contains(newText)
+                                    || mahasiswa.getNama().contains(newText)
+                                    || fakultasMhsFirstcapital.contains(newText)
+                                    || mahasiswa.getFakultas().contains(newText)
+                                    || mahasiswa.getFakultas().toLowerCase().contains(newText)
+                                    || emailMhsFirstcapital.contains(newText)
+                                    || mahasiswa.getEmail().contains(newText)
+                                    || mahasiswa.getEmail().toLowerCase().contains(newText)
+                                    || alamatMhsFirstcapital.contains(newText)
+                                    || mahasiswa.getAlamat().toLowerCase().contains(newText)
+                                    || mahasiswa.getAlamat().contains(newText)
+                                    ){
+                                dataMahasiswa.add(mahasiswa);
+                            }
                         }
 
                         adapter = new RecyclerViewAdapter(dataMahasiswa, MainActivity.this);
