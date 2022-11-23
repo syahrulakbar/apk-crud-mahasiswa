@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ public class AddMhs extends AppCompatActivity {
     private Spinner fakultas_spinner, prodi_spinner;
     private CheckBox goldar_a, goldar_b, goldar_ab, goldar_o;
     private RadioButton pria, wanita;
+    private ImageView ic_cancel;
     private Button btnSaveTask, btnCancel;
 
     private String getNim, getNama, getTgl_lahir, getNomorhp,getEmail, getIpk, getAlamat,getJk, getGoldar, getFakultas, getProdi;
@@ -57,6 +59,18 @@ public class AddMhs extends AppCompatActivity {
         pria = findViewById(R.id.pria);
         wanita = findViewById(R.id.wanita);
         btnSaveTask = findViewById(R.id.btnSaveTask);
+        ic_cancel = findViewById(R.id.ic_cancel);
+
+        // tombol cancel
+        ic_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AddMhs.this,"Data not saved",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AddMhs.this,MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // mengatur agar ketika mengklik tombol kembali tidak looping pada activity sebelumnya
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -116,21 +130,20 @@ public class AddMhs extends AppCompatActivity {
                 getIpk = inputIpk.getText().toString();
                 getAlamat = inputAlamat.getText().toString();
 
-                Intent intent = new Intent(AddMhs.this,MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // mengatur agar ketika mengklik tombol kembali tidak looping pada activity sebelumnya
-                startActivity(intent);
                 checkUser();
+
             }
         });
 
     }
 
     private void checkUser() {
-        if(isEmpty(getNim) && isEmpty(getNama) && isEmpty(getTgl_lahir)&& isEmpty(getNomorhp)&& isEmpty(getEmail)&& isEmpty(getIpk)&& isEmpty(getAlamat)&& isEmpty(getFakultas)&& isEmpty(getProdi)&& isEmpty(getGoldar)&& isEmpty(getJk)){
+        if(isEmpty(getNim) || isEmpty(getNama) || isEmpty(getTgl_lahir) || isEmpty(getNomorhp)|| isEmpty(getEmail)|| isEmpty(getIpk)|| isEmpty(getAlamat)|| isEmpty(getFakultas)|| isEmpty(getProdi)|| isEmpty(getGoldar)|| isEmpty(getJk)){
             Toast.makeText(AddMhs.this,"Data cannot be empty",Toast.LENGTH_SHORT).show();
         } else{
             getReference.child("MahasiswaKu").child("data").push()
-                    .setValue(new data_mahasiswa(getNim, getNama, getTgl_lahir, getNomorhp, getEmail, getIpk, getAlamat,getFakultas,getProdi,getGoldar,getJk))
+                    .setValue(new data_mahasiswa(
+                            getNim, getNama, getFakultas, getProdi, getGoldar, getJk, getTgl_lahir,getNomorhp,getEmail,getIpk,getAlamat))
                     .addOnCompleteListener(this, new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -146,9 +159,26 @@ public class AddMhs extends AppCompatActivity {
                             inputIpk.setText("");
                             inputAlamat.setText("");
                             // metod radio button
+                            if(pria.isChecked()){
+                                getGoldar = pria.getText().toString();
+                            }else{
+                                getGoldar = wanita.getText().toString();
+                            }
+                            //CB
+                            if(goldar_a.isChecked()){
+                                getGoldar = goldar_a.getText().toString();
+                            }else if(goldar_b.isChecked() ) {
+                                getGoldar = goldar_b.getText().toString();
+                            }else if(goldar_ab.isChecked()){
+                                getGoldar = goldar_ab.getText().toString();
+                            } else {
+                                getGoldar = goldar_o.getText().toString();
+                            }
 
                             Toast.makeText(AddMhs.this,"Successfully Added Mahasiswa", Toast.LENGTH_SHORT).show();
-
+                            Intent intent = new Intent(AddMhs.this,MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // mengatur agar ketika mengklik tombol kembali tidak looping pada activity sebelumnya
+                            startActivity(intent);
                         }
                     });
         }

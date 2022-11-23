@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    android:background="@drawable/bg_rv"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bg_rv"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/nimView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="19dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="NIM"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/nimTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:text="20SA1183"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/namaView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:text="Nama"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/namaTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="Mochamad Syahrul Akbar"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+<!--            edit text inputnim, inputnama, inputTanggal, inputNomorHp, inputEmail, inputIpk, inputAlamat-->
+<!--            spinner fakultas_spinner, prodi_spinner-->
+<!--            checkbox goldar_a, goldar_b, goldar_ab, goldar_o-->
+<!--            raadiogroup jk_radiobutton-->
+<!--            radiobutton pria, wanita-->
+
+            <TextView
+                android:id="@+id/fakultasView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="Fakultas"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/fakultasTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="Ilmu Komputer"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/prodiView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="Program Studi"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/prodiTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="Informatika"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/ipkView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="IPK"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/ipkTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="4.0"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/emailView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="Email"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/emailTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="07tav2akbar@gmail.com"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/noHpView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="Nomor Handphone"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/noHpTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="081548962893"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:id="@+id/jkView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="Jenis Kelamin"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/jkTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="Pria"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tanggalView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="Tanggal Lahir"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tanggalTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="12/02/2003"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/goldarView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="Golongan Darah"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/goldarTextView"
+                android:fontFamily="@font/mm"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:text="AB"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/alamatView"
+                android:fontFamily="@font/mm"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textColor="#ADADAD"
+                android:textAllCaps="true"
+                android:text="Alamat"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/alamatTextView"
+                android:fontFamily="@font/mm"
+                android:layout_marginBottom="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="Purwokerto"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rv"
+            >
+            <ImageView
+                android:id="@+id/ic_dots"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:src="@drawable/ic_dots"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

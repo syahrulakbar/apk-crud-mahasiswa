@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddMhs">
+    tools:context=".UpdateMhs">
     <LinearLayout
         android:id="@+id/formutama"
         android:layout_width="match_parent"
@@ -25,7 +25,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="24dp"
                 android:backgroundTint="@color/black"
-
                 android:src="@drawable/ic_back" />
 
         </LinearLayout>
@@ -38,7 +37,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="18dp"
             android:fontFamily="@font/mm"
-            android:text="Input Mahasiswa"
+            android:text="Update Mahasiswa"
             android:textColor="@color/black"
             android:textSize="26sp" />
 
@@ -87,7 +86,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/inputnim"
+                    android:id="@+id/updateNim"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/bginputtask"
@@ -123,7 +122,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/inputnama"
+                    android:id="@+id/updateNama"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/bginputtask"
@@ -160,7 +159,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/fakultas_spinner"
+                    android:id="@+id/fakultasUpdate"
                     android:entries="@array/fakultas"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
@@ -196,7 +195,7 @@
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/prodi_spinner"
+                    android:id="@+id/prodiUpdate"
                     android:entries="@array/prodi"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
@@ -362,7 +361,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/inputTanggal"
+                    android:id="@+id/updateTanggal"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/bginputtask"
@@ -401,7 +400,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/inputNomorHp"
+                    android:id="@+id/updateNomorHp"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/bginputtask"
@@ -437,7 +436,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/inputEmail"
+                    android:id="@+id/updateEmail"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/bginputtask"
@@ -473,7 +472,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/inputIpk"
+                    android:id="@+id/updateIpk"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/bginputtask"
@@ -509,7 +508,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/inputAlamat"
+                    android:id="@+id/UpdateAlamat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bginputtask"
@@ -534,7 +533,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
-                    android:id="@+id/btnSaveTask"
+                    android:id="@+id/btnUpdateTask"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_alignParentBottom="true"
@@ -545,7 +544,7 @@
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/bgbtnnew"
                     android:fontFamily="@font/mm"
-                    android:text="Simpan"
+                    android:text="Update"
                     android:textAllCaps="false"
                     android:textColor="#FFF"
                     android:textSize="22sp" />

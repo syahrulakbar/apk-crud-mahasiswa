@@ -6,7 +6,7 @@
 
     </string-array>
     <string-array name="prodi" fontFamily="@drawable/mm" textColor="#000000">
-        <item >Informatika</item>
+        <item>Informatika</item>
         <item>Sistem Informasi</item>
         <item>Teknologi Informasi</item>
         <item>Ilmu Komunikasi</item>

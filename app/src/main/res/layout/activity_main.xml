@@ -17,6 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <SearchView
+                android:id="@+id/etsearch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/bgsearch"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@android:color/transparent"
+                android:queryHint="Cari Mahasiswa"
+                android:searchHintIcon="@null"
+                android:searchIcon="@null" />
+
             <TextView
                 android:id="@+id/logo"
                 android:layout_width="wrap_content"
@@ -31,24 +43,21 @@
 
             </TextView>
 
+
             <ImageView
                 android:id="@+id/ic_cari"
                 android:layout_alignParentRight="true"
-                android:layout_width="30dp"
+                android:layout_width="40dp"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_search"/>
-
-            <SearchView
-                android:id="@+id/etsearch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/ic_close"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/bgsearch"
-                android:iconifiedByDefault="false"
-                android:queryBackground="@android:color/transparent"
-                android:queryHint="Cari Mahasiswa"
-                android:searchHintIcon="@null"
-                android:searchIcon="@null" />
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_close_search"/>
+
+
         </RelativeLayout>
 
 
