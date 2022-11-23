@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MahasiswaKu</string>
+    <string-array name="fakultas" fontFamily="@drawable/mm" textColor="#000000">
+        <item fontFamily="@drawable/mm">Ilmu Komputer</item>
+        <item>Bisnis dan Ilmu Sosial</item>
+
+    </string-array>
+    <string-array name="prodi" fontFamily="@drawable/mm" textColor="#000000">
+        <item >Informatika</item>
+        <item>Sistem Informasi</item>
+        <item>Teknologi Informasi</item>
+        <item>Ilmu Komunikasi</item>
+        <item>Bisnis Digital</item>
+
+    </string-array>
+</resources>

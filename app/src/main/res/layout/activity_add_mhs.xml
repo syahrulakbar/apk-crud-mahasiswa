@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMhs">
+    <LinearLayout
+        android:id="@+id/formutama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/form1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ic_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="@color/black"
+
+                android:src="@drawable/ic_back" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titlepage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/mm"
+            android:text="Input Mahasiswa"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#131E69" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formutama">
+
+
+        <RelativeLayout
+            android:id="@+id/form2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bgitemdoes"
+            android:orientation="vertical"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp">
+            <LinearLayout
+                android:id="@+id/formnim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addnim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="NIM Mahasiswa"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputnim"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:hint="Masukan NIM"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formnama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/formnim"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addnama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="Nama Mahasiswa"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputnama"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:hint="Masukan Nama"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formfakultas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/formnama"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:id="@+id/addfakultas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="Fakultas"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/fakultas_spinner"
+                    android:entries="@array/fakultas"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formprodi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/formfakultas"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:id="@+id/addprodi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="Program Studi"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/prodi_spinner"
+                    android:entries="@array/prodi"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/formgoldar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/formprodi"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addgoldar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="Golongan Darah"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:id="@+id/goldar_checkbox"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bginputtask"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="55dp">
+                    <CheckBox
+                        android:id="@+id/goldar_a"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/mm"
+                        />
+                    <CheckBox
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/goldar_b"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/mm"
+                        />
+                    <CheckBox
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/goldar_ab"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AB"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/mm"
+                        />
+                    <CheckBox
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/goldar_o"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="O"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/mm"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formjk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/formgoldar"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addjk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="Jenis Kelamin"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+
+                    android:id="@+id/jk_radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#B5B5B5" >
+                    <RadioButton
+                        android:id="@+id/pria"
+                        android:fontFamily="@font/mm"
+                        android:text="Pria"
+                        android:checked="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <RadioButton
+                        android:id="@+id/wanita"
+                        android:layout_marginLeft="70dp"
+                        android:fontFamily="@font/mm"
+                        android:text="Wanita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </RadioGroup>
+                <!--Nim, nama, fakultas, select fakultas, select informatika, checkbox goldar , jenis kelamin radiobutton tanggal lahir data, nomorhp number, email, ipk, alamat -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formtanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/formjk"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addTanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="Tanggal Lahir"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputTanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bginputtask"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/mm"
+                    android:hint="Masukan Tanggal Lahir"
+                    android:maxLength="25"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formnomorhp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/formtanggal"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addNomorHp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="Nomor Handphone"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputNomorHp"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:hint="08xxxxxxxxx"
+                    android:inputType="number"
+                    android:maxLength="25"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formemail"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/formnomorhp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="E-mail"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:hint="Masukan E-mail"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formipk"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/formemail"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addIpk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="IPK"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputIpk"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:hint="Masukan IPK"
+                    android:inputType="numberDecimal"
+                    android:maxLength="25"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formalamat"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/formipk"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addAlamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/ml"
+                    android:text="Alamat"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputAlamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bginputtask"
+                    android:fontFamily="@font/mm"
+                    android:hint="Masukan Alamat"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:minLines="6"
+                    android:scrollbars="vertical"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_below="@+id/formalamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnSaveTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bgbtnnew"
+                    android:fontFamily="@font/mm"
+                    android:text="Simpan"
+                    android:textAllCaps="false"
+                    android:textColor="#FFF"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
