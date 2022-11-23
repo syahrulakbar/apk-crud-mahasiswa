@@ -168,6 +168,8 @@ public class UpdateMhs extends AppCompatActivity {
     }
 
     private void GetData() {
+//        bundle.putString("dataFakultas", listMahasiswa.get(position).getFakultas());
+//        bundle.putString("dataProdi", listMahasiswa.get(position).getProdi());
 
         final String getNim = getIntent().getExtras().getString("dataNim");
         final String getNama = getIntent().getExtras().getString("dataNama");
@@ -181,24 +183,36 @@ public class UpdateMhs extends AppCompatActivity {
         final String getIpk = getIntent().getExtras().getString("dataIpk");
         final String getAlamat = getIntent().getExtras().getString("dataAlamat");
 
+// <item fontFamily="@drawable/mm">Ilmu Komputer</item>
+//        <item>Bisnis dan Ilmu Sosial</item>
+//
+//    </string-array>
+//    <string-array name="prodi" fontFamily="@drawable/mm" textColor="#000000">
+//        <item>Informatika</item>
+//        <item>Sistem Informasi</item>
+//        <item>Teknologi Informasi</item>
+//        <item>Ilmu Komunikasi</item>
+//        <item>Bisnis Digital</item>
 
         // Spinner
-        if (getFakultas.indexOf("Ilmu") != -1)
+        if (getFakultas.indexOf("Ilmu Komputer") != -1)
         {
             fakultasUpdate.setSelection(0);
-        }else if(getFakultas.indexOf("Bisnis") != -1){
+        }else if(getFakultas.indexOf("Bisnis dan Ilmu Sosial") != -1){
             fakultasUpdate.setSelection(1);
         }
 
-        if (getProdi.indexOf("Info") != -1)
+        if (getProdi.indexOf("Informatika") != -1)
         {
             prodiUpdate.setSelection(0);
-        }else if(getProdi.indexOf("Sistem") != -1){
+        }else if(getProdi.indexOf("Sistem Informasi") != -1){
             prodiUpdate.setSelection(1);
-        }else if(getProdi.indexOf("Ilmu") != -1){
+        }else if(getProdi.indexOf("Teknologi Informasi") != -1){
             prodiUpdate.setSelection(2);
-        }else if(getProdi.indexOf("Bisnis") != -1){
+        }else if(getProdi.indexOf("Ilmu Komunikasi") != -1){
             prodiUpdate.setSelection(3);
+        }else if(getProdi.indexOf("Bisnis Digital") != -1){
+            prodiUpdate.setSelection(4);
         }
         //CB
         if (getGoldar.indexOf("A") != -1)
