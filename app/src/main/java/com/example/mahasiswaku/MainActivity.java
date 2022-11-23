@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
             @Override
             public boolean onQueryTextChange(String newText) {
                 // searchview agar menampilkan data per kata yang cocok
-                Query query =getReference.child("MahasiswaKu").child("data").orderByChild("nama").orderByChild("nim").startAt(newText).endAt(newText+"\uf8ff");
+                Query query =getReference.child("MahasiswaKu").child("data").orderByChild("nama").startAt(newText).endAt(newText+"\uf8ff");
                 query.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                         }
                     });
         }else{
-            getReference.child("MahasiswaKu").child("data").orderByChild("nama").orderByChild("nim").startAt(cari).endAt(cari)
+            getReference.child("MahasiswaKu").child("data").orderByChild("nama").startAt(cari).endAt(cari)
                     .addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
